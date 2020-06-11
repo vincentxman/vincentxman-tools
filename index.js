@@ -1,12 +1,12 @@
 
 "use strict";
 
-// 静态带入，module['exports'] 没有输出时
+// Static import, when module ['exports'] has no output
 var EXPORTS = {
-	_console: require('./lib/console-color') // _console = undefined 没有作用	
+	_console: require('./lib/console-color') // _console = undefined (_console has no effect)	
 }
 
-// 动态载入， 第一次使用时才载入
+// Dynamic load, load only when used for the first time
 var dynamicLib = {
 	"tools": './lib/vincentxman-tools',
 	"crash": null
