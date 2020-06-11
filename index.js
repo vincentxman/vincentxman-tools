@@ -2,6 +2,6 @@
 "use strict";
 
 module['exports'] = {
-	tools:require('./lib/vincentxman-tools'),
-	console:require('./lib/console-color')
+	console:require('./lib/console-color'),
+	tools:require('./lib/vincentxman-tools')
 }

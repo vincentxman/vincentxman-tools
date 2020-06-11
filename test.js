@@ -6,6 +6,7 @@ console.log('-'.repeat(10), 'vincentxman-tools'.underline.magenta.bold);
 
 v.tools.fun();
 
+
 // console-color
 console.log('-'.repeat(10), 'console-color'.underline.magenta.bold);
 console.info('this is a test');
