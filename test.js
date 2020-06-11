@@ -4,8 +4,9 @@ console.clear();
 // vincentxman-tools
 console.log('-'.repeat(10), 'vincentxman-tools'.underline.magenta.bold);
 
-v.tools.fun();
-
+v.tools.fun(); // 将动态载入 tools
+v.tools.fun(); // 已经载入 tools 了，直接调用。
+// v.crash;
 
 // console-color
 console.log('-'.repeat(10), 'console-color'.underline.magenta.bold);
