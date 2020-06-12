@@ -3,7 +3,7 @@
 
 // Static import, when module ['exports'] has no output
 var EXPORTS = {
-	_console: require('./lib/console-color') // _console = undefined (_console has no effect)	
+	_console: require('./lib/console-color') //因为有用到 defineProperty 从定义console. 所以必须静态import
 }
 
 // Dynamic load, load only when used for the first time
