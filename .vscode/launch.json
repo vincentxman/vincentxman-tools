@@ -6,7 +6,7 @@
 	"configurations": [
 
 		{
-			"name": "JS: current file",
+			"name": "JS: ${file}",
 			"type": "node",
 			"request": "launch",
 			"skipFiles": [
@@ -33,6 +33,19 @@
 				//"ts-node/register",
 				"D:/nodejs/node_global/node_modules/ts-node/register",
                 "test.ts"
+                // "${relativeFile}"
+            ],
+		},
+		{
+            "name": "TS: ${file}",
+            "type": "node",
+            "request": "launch",
+            //"console": "integratedTerminal",
+            "args": [
+                "-r",
+				//"ts-node/register",
+				"D:/nodejs/node_global/node_modules/ts-node/register",
+                "${file}"
                 // "${relativeFile}"
             ],
         }

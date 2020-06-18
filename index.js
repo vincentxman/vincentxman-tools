@@ -1,12 +1,12 @@
 
 "use strict";
 
-// Static import, when module ['exports'] has no output
+// 静态导入
 var EXPORTS = {
-	_console: require('./lib/console-color') //因为有用到 defineProperty 从定义console. 所以必须静态import
+	_console: require('./lib/console-color') //因为有用到 defineProperty 从新定义console. 所以必须静态import
 }
 
-// Dynamic load, load only when used for the first time
+// 动态导入, 仅在首次使用时才加载
 var dynamicLib = {
 	"tools": './lib/vincentxman-tools',
 	"crash": null
