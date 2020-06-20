@@ -7,9 +7,6 @@ tools.fun(); // 将动态载入 tools
 tools.fun(); // 已经载入 tools 了，直接调用。
 // v.crash;
 
-var a=5;
-console.log((a as any).red);
-
 // console-color
 // 库使用 Object.defineProperty 这里需要宣告才能在 ts 内使用
 console.log('-'.repeat(10), ('console-color' as any).underline.magenta.bold);
@@ -25,6 +22,6 @@ c.debug('console.debug');
 c.d('console.d\n');
 
 
-console.log('there is a ' + ('info' as any).info + (' e\n' as any).e);
+console.log('there is a ' + ('info' as any).info + (<any>' e\n').e);
 
-console.log(('there is a ' as any).yellow.greyBG + ('warn\n' as any).black.yellowBG.bold);
+console.log(('there is a ' as any).yellow.greyBG + (<any>'warn\n').black.yellowBG.bold);
