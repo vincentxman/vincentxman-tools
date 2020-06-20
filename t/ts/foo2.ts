@@ -1,6 +1,7 @@
 export interface Bar {
 	count: number;
 }
+export type Bar2=Bar;
 
 class ClsBar {
 	a: Bar={

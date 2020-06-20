@@ -1,33 +1,57 @@
-//import {tools, _console as c} from './index';
-let v = require('./index');
-let tools=v.tools;
-let c=v._console;
+
+const { tools, _console } = require('./index'); // require 加载 ./index.js  不是 ./index.d.ts
+const c = _console;
+// 等同
+// const v = require('./index');
+// const tools = v.tools;
+// const c = v._console;
 
 console.clear();
 
 // vincentxman-tools
 console.log('-'.repeat(10), 'vincentxman-tools');
 
-v.tools.fun(); // 将动态载入 tools
-v.tools.fun(); // 已经载入 tools 了，直接调用。
+tools.fun(); // 将动态载入 tools
+tools.fun(); // 已经载入 tools 了，直接调用。
 // v.crash;
 
 // console-color
-console.log('-'.repeat(10), 'console-color');
-c.info('this is a test');
-c.i('this is a test');
-c.error('this is a test');
-c.e('this is a test');
-c.warn('this is a test');
-c.w('this is a test');
-c.debug('this is a test');
-c.d('this is a test\n');
+//console.log('-'.repeat(10), 'console-color');
+console.log('-'.repeat(10), ('console-color' as any).underline.magenta.bold);
+c.info('console.info');
+c.i('console.i');
+c.error('console.error');
+c.e('console.e');
+c.warn('console.warn');
+c.w('console.w');
+c.debug('console.debug');
+c.d('console.d\n');
 
-// console.log('there is a ' + 'info'.info + ' too'.e);
-// console.log('there is a ' + 'error'.error + ' too'.i);
-// console.log('there is a ' + 'warn'.warn + ' too'.d);
-// console.log('there is a ' + 'debug'.debug + ' too\n'.w);
+// 库使用 Object.defineProperty 这里需要宣告才能在 ts 内使用
+declare interface String {
+	info: string,
+	i: string,
 
-// console.log('there is a '.yellow.greyBG + 'warn\n'.black.yellowBG.bold);
+	error: string,
+	e: string,
 
+	warn: string,
+	w: string,
+
+	debug: string,
+	d: string,
+
+	yellow: string,
+	black: string,
+	greyBG: string,
+	yellowBG: string,
+}
+
+console.log('there is a ' + 'info'.info + ' e'.e);
+console.log('there is a ' + 'error'.error + ' i'.i);
+console.log('there is a ' + 'warn'.warn + ' d'.d);
+console.log('there is a ' + 'debug'.debug + ' w\n'.w);
+
+console.log('there is a '.yellow.greyBG + 'warn'.black.yellowBG.bold);
+console.log('there is a '.yellow.greyBG + 'warn\n'.black.yellowBG);
 

@@ -1,4 +1,4 @@
-
+// 宣告: foo.d.ts
 var Bar={
 	a:{
 		count:5
