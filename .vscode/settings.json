@@ -7,8 +7,10 @@
 		"**/.DS_Store": true,
 		"**/*.bak": true,
 		"**/*.spec.ts": true,
-		"node_modules/**/*": false,
-		"_run.bat": true
+		"node_modules/**/*": true,
+		"_run.bat": true,
+		"**/build": false,
+		"build": true
 	},
 	"explorerExclude.backup": null
 }

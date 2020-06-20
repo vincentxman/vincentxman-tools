@@ -8,6 +8,9 @@ class ClsBar {
 		count:15
 	};
 	b:string='Im bar';
+	/**
+	 * 注解测试
+	 */
 	setNumber(n:number):void {
 		aNumber=n;
 	}
