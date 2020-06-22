@@ -1,1 +1,0 @@
-import {myLib} from './g'
