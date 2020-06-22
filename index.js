@@ -8,7 +8,7 @@ var EXPORTS = {
 
 // 动态导入, 仅在首次使用时才加载
 var dynamicLib = {
-	"tools": './lib/vincentxman-tools',
+	"vtools": './lib/vincentxman-tools',
 	"crash": null
 }
 

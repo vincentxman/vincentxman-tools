@@ -1,7 +1,7 @@
 {
   "name": "vincentxman-tools",
-  "version": "1.0.6",
-  "description": "",
+  "version": "1.0.7",
+  "description": "vincentxman's tools",
   "main": "index.js",
   "scripts": {
     "0-build": "tsc",

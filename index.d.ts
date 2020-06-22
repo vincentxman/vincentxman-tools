@@ -102,5 +102,5 @@ declare global {
 	}
 }
 
-export const tools: Tools;
+export const vtools: Tools;
 export const _console: _Console;

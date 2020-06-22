@@ -1,4 +1,4 @@
-const { tools } = require('./index'); // require 加载 ./index.js 
+const { vtools } = require('./index'); // require 加载 ./index.js 
 /// 等同
 /// const v = require('./index');
 /// const tools=v.tools;
@@ -9,8 +9,8 @@ console.clear();
 // vincentxman-tools
 console.log('-'.repeat(10), 'vincentxman-tools'.underline.magenta.bold);
 
-tools.fun(); // 将动态载入 tools
-tools.fun(); // 已经载入 tools 了，直接调用。
+vtools.fun(); // 将动态载入 tools
+vtools.fun(); // 已经载入 tools 了，直接调用。
 // v.crash;
 
 // console-color

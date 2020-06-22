@@ -1,10 +1,10 @@
-import { tools, _console as c } from './index.js'; // import 加载 ./index.d.ts
+import { vtools, _console as c } from './index.js'; // import 加载 ./index.d.ts
 
 console.clear();
 
 console.log('-'.repeat(10), 'vincentxman-tools');
-tools.fun(); // 将动态载入 tools
-tools.fun(); // 已经载入 tools 了，直接调用。
+vtools.fun(); // 将动态载入 tools
+vtools.fun(); // 已经载入 tools 了，直接调用。
 // v.crash;
 
 // console-color
