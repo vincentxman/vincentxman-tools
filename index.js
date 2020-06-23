@@ -17,7 +17,7 @@ for (var key in dynamicLib) {
 	(function(aKey){
 		Object.defineProperty(EXPORTS, aKey, {
 			configurable: true,
-			get: function () {				
+			get: function () {
 				return props[aKey]==null? (props[aKey]=require(dynamicLib[aKey])):props[aKey];
 			}
 		});
