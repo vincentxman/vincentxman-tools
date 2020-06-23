@@ -1,4 +1,4 @@
-import { vtools, _console as c } from './index.js'; // import 加载 ./index.d.ts
+import { vtools, _console as c } from './index'; // import 加载 ./index.d.ts
 
 console.clear();
 
@@ -31,4 +31,7 @@ console.d('console.d\n');
 
 console.log('there is a ' + 'info'.info + ' e\n'.e);
 
-console.log('there is a '.yellow.greyBG + 'warn\n'.black.yellowBG.bold);
+console.log('there is a '.black.whiteBG + 'warn\n'.blue.yellowBG.bold);
+
+var aNumber: number = 123455;
+console.info('number: ' + aNumber.warn.blueBG.bold);

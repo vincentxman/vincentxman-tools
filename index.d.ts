@@ -4,42 +4,27 @@ declare class Tools {
 	fun2(): void;
 }
 
-declare class _Console {
-	i(...args: any[]): void;
-	info(...args: any[]): void;
+type MsgFunction = (message?: any, ...optionalParams: any[]) => void;
 
-	e(...args: any[]): void;
-	error(...args: any[]): void;
+type ConsoleBrief={
+	i: MsgFunction;
+	e: MsgFunction;
+	w: MsgFunction;
+	d: MsgFunction;
+}
 
-	w(...args: any[]): void;
-	warn(...args: any[]): void;
-
-	d(...args: any[]): void;
-	debug(...args: any[]): void;
+declare interface _Console extends ConsoleBrief {
+	info: MsgFunction;
+	error: MsgFunction;
+	warn: MsgFunction;
+	debug: MsgFunction;
 }
 
 // 以下declare可以使ts档案内使用如 console.log('there is a ' + 'info'.info + ' e\n'.e);
 declare global {
-	interface Console {
-		i(...args: any[]): void;
-		e(...args: any[]): void;
-		w(...args: any[]): void;
-		d(...args: any[]): void;
-	}
+	interface Console extends ConsoleBrief { }
+
 	interface String {
-		info: string;
-		i: string;
-
-		error: string;
-		e: string;
-
-		warn: string;
-		w: string;
-
-		debug: string;
-		d: string;
-	}
-	interface Number {
 		info: string;
 		i: string;
 
@@ -76,30 +61,7 @@ declare global {
 		redBG: string;
 		yellowBG: string;
 	}
-	interface Number {
-		italic: string;
-		underline: string;
-		inverse: string;
-		strikethrough: string;
-		white: string;
-		grey: string;
-		black: string;
-		blue: string;
-		cyan: string;
-		green: string;
-		magenta: string;
-		red: string;
-		yellow: string;
-		whiteBG: string;
-		greyBG: string;
-		blackBG: string;
-		blueBG: string;
-		cyanBG: string;
-		greenBG: string;
-		magentaBG: string;
-		redBG: string;
-		yellowBG: string;
-	}
+	interface Number extends String { }
 }
 
 export const vtools: Tools;
