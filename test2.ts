@@ -2,7 +2,7 @@ import { vtools, _console as c } from './index'; // import 加载 ./index.d.ts
 
 console.clear();
 
-console.log('-'.repeat(10), 'vincentxman-tools');
+console.log('-'.repeat(10), 'vnt_tools');
 vtools.fun(); // 将动态载入 tools
 vtools.fun(); // 已经载入 tools 了，直接调用。
 // v.crash;
