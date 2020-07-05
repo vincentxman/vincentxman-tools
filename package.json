@@ -1,6 +1,6 @@
 {
   "name": "vincentxman-tools",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "vincentxman's tools",
   "main": "index.js",
   "scripts": {
