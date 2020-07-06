@@ -33,5 +33,3 @@ console.log('there is a ' + 'info'.info + ' e\n'.e);
 
 console.log('there is a '.black.whiteBG + 'warn\n'.blue.yellowBG.bold);
 
-var aNumber: number = 123455;
-console.info('number: ' + aNumber.warn.blueBG.bold);
