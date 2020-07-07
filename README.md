@@ -1,23 +1,33 @@
-# Description
-this plugins is used for ...
-# install
-> npm install vincentxman-tools -D
+# vincentxman-tools
+Mini lightweight console color logger.
+## install
+```bashell
+> npm install vincentxman-tools -S
+```
 
-# use
-``
-require('vincentxman-tools');
-``
-# DEMO1
-use default color
-设定了默认颜色。console.info直接输出为红色
-````
-//use color
-console.info('------------ default color--------');
-console.info('info', 'this is green text'); //green text
-console.warn('this is warn');//yellowBG text
-console.error('this is error');//red text
-console.debug('this is debug');//gray text
-console.log('this is log','msg1'.red, 'msg2'.blue);
-console.info('this is info','msg1'.red, 'msg2'.blue); //force change default color
-console.info('----------------------------');
-````
+## demo.js
+```javascript
+require('vincentxman-tools'); 
+
+console.i('console.info');
+console.e('console.error');
+console.w('console.warn');
+console.d('console.debug\n');
+
+console.log('there is a ' + 'info'.info + ' e\n'.e);
+console.log('there is a '.black.whiteBG + 'warn\n'.blue.yellowBG.bold);
+```
+
+## demo.ts
+```javascript
+import { _console} from 'vincentxman-tools'; 
+_console.init();
+
+console.i('console.info');
+console.e('console.error');
+console.w('console.warn');
+console.d('console.debug\n');
+
+console.log('there is a ' + 'info'.info + ' e\n'.e);
+console.log('there is a '.black.whiteBG + 'warn\n'.blue.yellowBG.bold);
+```
