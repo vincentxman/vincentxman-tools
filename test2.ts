@@ -1,10 +1,10 @@
-import { tools, _console as c } from './index.js'; // import 加载 ./index.d.ts
+import { vtools, _console as c } from './index'; // import 加载 ./index.d.ts
 
 console.clear();
 
-console.log('-'.repeat(10), 'vincentxman-tools');
-tools.fun(); // 将动态载入 tools
-tools.fun(); // 已经载入 tools 了，直接调用。
+console.log('-'.repeat(10), 'vnt_tools');
+vtools.fun(); // 将动态载入 tools
+vtools.fun(); // 已经载入 tools 了，直接调用。
 // v.crash;
 
 // console-color
@@ -31,4 +31,5 @@ console.d('console.d\n');
 
 console.log('there is a ' + 'info'.info + ' e\n'.e);
 
-console.log('there is a '.yellow.greyBG + 'warn\n'.black.yellowBG.bold);
+console.log('there is a '.black.whiteBG + 'warn\n'.blue.yellowBG.bold);
+

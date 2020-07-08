@@ -1,5 +1,5 @@
 
-const { tools, _console } = require('./index'); // require 加载 ./index.js  不是 ./index.d.ts
+const { vtools, _console } = require('./index'); // require 加载 ./index.js  不是 ./index.d.ts
 const c = _console;
 // 等同
 // const v = require('./index');
@@ -11,8 +11,8 @@ console.clear();
 // vincentxman-tools
 console.log('-'.repeat(10), 'vincentxman-tools');
 
-tools.fun(); // 将动态载入 tools
-tools.fun(); // 已经载入 tools 了，直接调用。
+vtools.fun(); // 将动态载入 tools
+vtools.fun(); // 已经载入 tools 了，直接调用。
 // v.crash;
 
 // console-color
