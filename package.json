@@ -1,6 +1,6 @@
 {
   "name": "vincentxman-tools",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "vincentxman's tools",
   "main": "index.js",
   "scripts": {
@@ -10,8 +10,8 @@
     "registry-set-taobao": "start npm config set registry=https://registry.npm.taobao.org/",
     "npm-publish": "npm publish"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["color console","log","printf","info","warn"],
+  "author": "vincentxman",
   "license": "ISC",
   "devDependencies": {},
   "dependencies": {
