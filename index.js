@@ -1,24 +1,23 @@
 
 "use strict";
 
-// Static import, when module ['exports'] has no output
+// 静态导入
 var EXPORTS = {
-	_console: require('./lib/console-color') // _console = undefined (_console has no effect)	
+	_console: require('./lib/vnt_console') //因为有用到 defineProperty 重新定义global.Console. 所以必须静态import
 }
 
-// Dynamic load, load only when used for the first time
+// 动态导入, 仅在首次使用时才加载
 var dynamicLib = {
-	"tools": './lib/vincentxman-tools',
+	"vtools": './lib/vnt_tools',
 	"crash": null
 }
 
-for (var key in dynamicLib) {
-	var props={};
+for (var key in dynamicLib) {	
 	(function(aKey){
 		Object.defineProperty(EXPORTS, aKey, {
 			configurable: true,
 			get: function () {				
-				return props[aKey]==null? (props[aKey]=require(dynamicLib[aKey])):props[aKey];
+				return require(dynamicLib[aKey]); // require 内部自己会做cache缓存
 			}
 		});
 	})(key)
